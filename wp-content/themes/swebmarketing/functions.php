@@ -9,15 +9,16 @@
                    "use strict";
                    $(window).scroll(function () {
                      var vPos = $(window).scrollTop();
-                     var totalH = $(".navbar-wrapper.span9").offset().top;
-                     var finalSize = totalH - vPos;
+                     var navH = $(".navbar-wrapper.span9").offset().top;
+                     var navSize = navH - vPos;
                      
-                     console.log(finalSize);
-                      if (finalSize <= 0) {
+                      if (navSize <= 0) {
                         $('.navbar.notresp').addClass('fixed');
+                        $(".tc-header .brand a.site-logo").addClass('fixed');
                       }
                       else{
                         $('.navbar.notresp').removeClass('fixed');
+                        $(".tc-header .brand a.site-logo").removeClass('fixed');
                       }
                     });
                    
