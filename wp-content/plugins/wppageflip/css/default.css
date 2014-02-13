@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+BODY {
+	font: normal 0.7em "verdana";
+	background: #EEEEEE;
+	color: #fff;
+	text-align: center;
+}
+
+A {
+	color: #666;
+}
+
+#flashcontent {
+	text-align: left;
+	margin: 0 auto;
+}

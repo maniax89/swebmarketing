@@ -119,6 +119,10 @@ class TC_footer_main {
       	);
     }
 
+    function tc_colophon_center_block() {
+    	
+    	
+    }
 
 
 
