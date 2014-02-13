@@ -85,6 +85,7 @@ h2{
     width:100%;
     margin:0;    
     position:absolute;
+    z-index:1000;
 }
 .tc-header .brand a.site-logo{
     width:352px;
@@ -109,7 +110,7 @@ h2{
     margin:290px 0;
     min-height:20px;
     width:100%;
-    z-index:0;
+    z-index:1000;
 }
 .navbar.notresp.fixed{
     position:fixed;
@@ -155,8 +156,9 @@ h2{
     width:100%;
 }
 /*bookblock styling*/
+
 #bb-nav{
-    width:400px;
+    max-width:400px;
     margin:0 auto;
 }
 #bb-nav span{
@@ -214,8 +216,14 @@ h2{
     #main-wrapper{
         padding:0;
     }
+    .bb-bookblock {
+        width:100%;
+    }
+    .notebook-page{
+        width:35%;
+    }
 }
-@media screen and (max-width: 352px) { 
+@media screen and (max-width: 380px) { 
   img.bg {
     left: 50%;
     margin-left: -176px;
