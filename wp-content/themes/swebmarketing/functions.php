@@ -1,8 +1,13 @@
 <?php
+
+   remove_filter( 'the_content', 'wpautop' );
+   remove_filter( 'the_excerpt', 'wpautop' );
+
    wp_enqueue_style('book_block_css', get_stylesheet_directory_uri() . "/css/bookblock.css");
    wp_enqueue_style('book_block_css', get_stylesheet_directory_uri() . "/css/default.css");
    
    wp_enqueue_script('jquery');
+   wp_enqueue_script('iscroll', get_stylesheet_directory_uri() . "/js/iscroll-lite.js");
    wp_enqueue_script('modernizr', get_stylesheet_directory_uri() . "/js/modernizr.custom.js", array('jquery'));
    wp_enqueue_script('jquerypp', get_stylesheet_directory_uri() . "/js/jquerypp.custom.js", array('modernizr','jquery'));
    wp_enqueue_script('book_block', get_stylesheet_directory_uri() . "/js/bookblock.js", array('jquerypp','modernizr','jquery'));
@@ -14,6 +19,12 @@
        ?>
        <script type="text/javascript">
            jQuery(document).ready(function () {
+            
+            
+
+            //var myScroll = new IScroll('#main-content');
+            
+
                ! function ($) {
                    //prevents js conflicts
                    "use strict";
@@ -31,6 +42,10 @@
                         $(".tc-header .brand a.site-logo").removeClass('fixed');
                       }
                     });
+                   
+                   $("a.round-div").attr("href","#").click(function(){
+                     return false;
+                   })
                    
                }(window.jQuery)
            });
