@@ -47,11 +47,9 @@
                      return false;
                    })
                    
-                  $("#menu-main-menu a").on("click", function (){
+                  $("#menu-main-menu a, #menu-main-menu-1 a").on("click", function (){
                      var elementID = $(this).attr("href");
-                     console.log(elementID);
                      var element = $(elementID);
-                     console.log(element);
                      $("html, body").animate({
                         scrollTop: element.offset().top }, "slow");
                      return false;

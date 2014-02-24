@@ -14,29 +14,18 @@
 
 /*site wide styles*/
 @font-face {
-    font-family: "Skia";
-    src: url('fonts/skia.eot');
-    src: url('fonts/skia.eot?#iefix') format('embedded-opentype'),
-    url('fonts/skia.ttf') format('truetype');
-    font-weight:normal;
-    font-style:normal;
-}
-
-@font-face {
-    font-family: "Abadi MT Condensed Light";
-    src: url('fonts/Abadi-MT-Condensed-Light.eot');
-    src: url('fonts/Abadi-MT-Condensed-Light.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Abadi-MT-Condensed-Light.ttf') format('truetype');
-    font-weight:normal;
-    font-style:normal;
+    font-family: 'Skia';
+    src: url('fonts/Skia-Regular.eot');
+    src: local('Skia Regular'), url('fonts/Skia-Regular.svg') format('svg'), url('fonts/Skia-Regular.woff') format('woff'), url('fonts/Skia-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 @font-face {
-    font-family: "Abadi MT Condensed Bold";
-    src: url('fonts/Abadi-MT-Condensed-Bold.eot');
-    src: url('fonts/Abadi-MT-Condensed-Bold.eot?#iefix') format('embedded-opentype'),
-    url('fonts/Abadi-MT-Condensed-Bold.ttf') format('truetype');
-    font-weight:normal;
-    font-style:normal;
+	font-family: 'Abadi MT Condensed Light';
+	src: url('fonts/Abadi-MT-Condensed-Light.eot');
+	src: local('Abadi MT Condensed Light'), url('fonts/Abadi-MT-Condensed-Light.svg') format('svg'), url('fonts/Abadi-MT-Condensed-Light.woff') format('woff'), url('fonts/Abadi-MT-Condensed-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 .teal{
     background-color:#00B197;
@@ -59,7 +48,6 @@
 
 img.bg {
   min-height: 100%;
-  min-width:2448px;
   width: 100%;
   height: auto;
   position: fixed;
@@ -70,7 +58,7 @@ img.bg {
 
 body{
     font-family: 'Abadi MT Condensed Light', verdana, sans-serif;
-    font-size:  100%;
+    font-size:  18pt;
     line-height:1em;
     background:url(images/sweb-background-v1.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -382,6 +370,13 @@ footer#footer p, footer#footer a{
         margin-top:0;
         margin-left:0;
     }
+    body{
+        background:url(images/sweb-background-800-v1.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;  
+    }
     
 }
 @media screen and (max-width: 480px){
@@ -392,10 +387,11 @@ footer#footer p, footer#footer a{
     .span12.article-container .thumb-wrapper{
         height:225px;
     }
+    body{
+        background:url(images/sweb-background-500-v1.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;  
+    }
 }
-/*@media screen and (max-width: 2448px) { 
-  img.bg {
-    left: 50%;
-    margin-left: -1224px;
-  }
-}*/
