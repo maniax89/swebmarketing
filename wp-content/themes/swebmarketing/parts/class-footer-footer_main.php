@@ -109,28 +109,28 @@ class TC_footer_main {
 	 * @since Customizr 3.0.10
 	 */
     function tc_colophon_left_block() {
-
-      	echo apply_filters( 
-      		'tc_colophon_left_block', 
-      		sprintf('<div class="%1$s">%2$s</div>',
-      			apply_filters( 'tc_colophon_left_block_class', 'span4 social-block pull-left' ),
-      			0 != tc__f( '__get_option', 'tc_social_in_footer') ? tc__f( '__get_socials' ) : ''
-      		)
-      	);
-    }
-
-    function tc_colophon_center_block() {
 	echo apply_filters(
     		'tc_credits_display',
     		sprintf('<div class="%1$s">%2$s</div>',
 	    		apply_filters( 'tc_colophon_center_block_class', 'span4 credits' ),
-	    		sprintf( '<p> &middot; &copy; %1$s <a href="%2$s" title="%3$s" rel="bookmark">%3$s</a> &middot; </p>',
+	    		sprintf( '<p>&copy; %1$s <a href="%2$s" title="%3$s" rel="bookmark">%3$s</a></p>',
 					    esc_attr( date( 'Y' ) ),
 					    esc_url( home_url() ),
 					    esc_attr(get_bloginfo())
 				)
     		)
-    	);   	
+    	);  
+      	
+    }
+
+    function tc_colophon_center_block() {
+	echo apply_filters( 
+      		'tc_colophon_left_block', 
+      		sprintf('<div class="%1$s">%2$s</div>',
+      			apply_filters( 'tc_colophon_left_block_class', 'span4 social-block pull-left' ),
+      			0 != tc__f( '__get_option', 'tc_social_in_footer') ? tc__f( '__get_socials' ) : ''
+      		)
+      	); 	
     	
     }
 
