@@ -51,7 +51,8 @@ body{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;  
+    background-size: cover;
+    overflow-x:hidden;
 }
 body.ie{
     background-size:40%;
@@ -350,12 +351,14 @@ li{
 #services-header{
     padding:5px 5%;
 }
+
 .right-column .slide-in{
     left:120%;
 }
 .right-column .slide-in.visible{
     left:0;
 }
+
 /*bookblock styling*/
 
 #bb-nav{
@@ -405,7 +408,7 @@ li{
 .contact-form div input[type="text"], .contact-form div input[type="email"]{
     float:left;
     width:75%;
-    max-width:300px;
+    max-width:380px;
 }
 .contact-form label.grunion-field-label span{
     display:none;
@@ -541,7 +544,7 @@ footer#footer p, footer#footer a{
         width:70%;
     }
     
-    #services .left-column, #services .right-column{
+    .left-column, .right-column{
         width:100%;
     }
     
@@ -553,7 +556,12 @@ footer#footer p, footer#footer a{
         width:480px;
         margin:0 auto;
     }
-    
+    .right-column .slide-in{
+        left:-200%;
+    }
+    .right-column .slide-in.visible{
+        left:0;
+    }
 }
 @media screen and (max-width: 480px){
     .navbar .navbar-inner{
