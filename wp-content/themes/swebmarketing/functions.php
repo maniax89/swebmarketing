@@ -31,6 +31,8 @@
                ! function ($) {
                   //prevents js conflicts
                   "use strict";
+                  //initialize logo as visible
+                  $(".tc-header .brand a.site-logo").addClass("visible");
                   $(window).scroll(function () {
                      var vPos = $(window).scrollTop();
                      var windowH = $(window).height();
@@ -39,11 +41,14 @@
                      
                      if (navSize <= 0) {
                         $('.navbar.notresp').addClass('fixed');
-                        $(".tc-header .brand a.site-logo").addClass('fixed');
+                        $(".tc-header .brand a.site-logo").addClass('fixed').removeClass("visible");
                      }
                      else{
                         $('.navbar.notresp').removeClass('fixed');
-                        $(".tc-header .brand a.site-logo").removeClass('fixed');
+                        $(".tc-header .brand a.site-logo").removeClass('fixed').addClass("notransition");
+                        setTimeout(function(){
+                           $(".tc-header .brand a.site-logo").removeClass('notransition').addClass('visible');
+                        }, 700);
                      }
                       
                      //make images come into screen                     console.log("vpos: " + vPos);
@@ -55,6 +60,7 @@
                            }
                         }
                      });
+                     
                   });
                    
                    $("a.round-div").attr("href","#").click(function(){
