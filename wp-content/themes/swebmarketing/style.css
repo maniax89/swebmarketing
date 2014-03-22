@@ -31,36 +31,50 @@
 .gray{
     background-color:#DBDBDB;
 }
-
+.size-3x5,.size-2x3,.size-3x4 {
+    display:none;
+}
 img.bg {
   min-height: 100%;
-  width: 100%;
+  min-width: 910px;
+  
+  width:100%;
   height: auto;
+  
   position: fixed;
   top: 0;
   left: 0;
   z-index:-100;
 }
-body{
-    overflow-x:hidden;
-}
-body{
+html, body{
     font-family: 'Magra', sans-serif;
     font-weight:400;
     font-size:  18pt;
     line-height:1em;
-    background:url(images/sweb-background-1600-zoom-v1.jpg) no-repeat center center fixed;
+    overflow-x: hidden;
+    /*
+    background-image:url(images/sweb-background-v2-full.jpg) ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0;
+    width: 100%;
+    -webkit-overflow-scrolling:touch;
+    */
 }
-body.ie{
+/*body.ie{
     background-size:40%;
 }
 body.ie6, body.ie7, body.ie8{
     background:none;
-}
+}*/
 h2{
     font-family: 'Magra', sans-serif;
     font-weight: 400;
@@ -76,6 +90,9 @@ h3{
 }
 h4{
     padding-bottom:0;
+    text-shadow: none;
+    font-size:1em;
+    line-height: 1em;
 }
 
 input[type="text"], input[type="submit"], input[type="email"]{
@@ -306,6 +323,9 @@ li{
 .plus{
     color:#7986B0;
 }
+.bold{
+    font-weight:700;
+}
 .left-column{
     float:left;
     width:50%;
@@ -315,6 +335,9 @@ li{
     text-align:right;
     width:48%;
     padding:1%;
+}
+#quote .right-float{
+    font-size:0.8em;
 }
 .right-float{
     float:right;
@@ -349,8 +372,9 @@ li{
     color:#fff;
     position:relative;
     top:-68px;
-    left:21px;
-    width:100%; 
+    left:19px;
+    width:100%;
+    font-size:1.2em;
 }
 .divider{
     padding-bottom:10px;
@@ -359,28 +383,25 @@ li{
     padding-bottom:30px;
 }
 /*our services */
-.services-container{
-    margin-left:5%;
-}
 .service-item{
     clear:both;
-    padding:40px 5px 0 0;
-    min-height:60px;
+    padding:50px 5px 0 0;
 }
 .service-item img{
-    width:60px;
+    width:20%;
     float:left;
 }
-.service-item div{
-    float:left;
+.service-item span{
     text-align:left;
     width:80%;
-    line-height:56px;
-    height:56px;
+    vertical-align: middle;
+    font-size:0.8em;
+    line-height:400%;
 }
 #services{
     border: none;
     padding-top:0;
+    padding-bottom:50px;
 }
 #services-header{
     padding:5px 5%;
@@ -388,14 +409,17 @@ li{
 }
 #services .right-column{
     padding:0;
-    width:43%;
-    float:right;
+    width:50%;
+    text-align: left;
+    float: left;
 }
 #services .left-column{
-    width:54%;
+    width:50%;
 }
 #services .inner-section{
-    max-width:780px;
+    max-width:880px;
+    position:relative;
+    left:7%;
 }
 
 /*bookblock styling*/
@@ -510,6 +534,9 @@ footer#footer p, footer#footer a{
 .span4.social-block.pull-left{
     display:none;
 }
+footer#footer .colophon a.back-to-top{
+    color:#5f5f5f;
+}
 
 /* mobile styling */
 @media screen and (max-width:979px){
@@ -529,6 +556,7 @@ footer#footer p, footer#footer a{
         margin:0;
         z-index:10;
         top:0;
+        left:0;
         width:100%;
     }
     .navbar .navbar-inner{
@@ -572,6 +600,12 @@ footer#footer p, footer#footer a{
         width:82%;
     }
 }
+@media screen and (max-width:910px){
+    img.bg{
+        left:50%;
+        margin-left:-455px;
+    }
+}
 @media screen and (max-width:767px){
     .span12.article-container .thumb-wrapper img{
         top:32px;
@@ -579,22 +613,12 @@ footer#footer p, footer#footer a{
         margin-top:0;
         margin-left:0;
     }
-    body{
-        background:url(images/sweb-background-800-zoom-v1.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;  
-    }
     .float-item-content{
         width:70%;
     }
     
     .left-column, .right-column{
         width:100%;
-    }
-    .services-container{
-        margin-left:0;
     }
     #services .left-column{
         width:100%;
@@ -607,9 +631,12 @@ footer#footer p, footer#footer a{
     #services-header div{
         max-width:480px;
     }
+    #services .inner-section{
+        position:static;
+    }    
     
     .service-item{
-        width:480px;
+        max-width:480px;
         margin:0 auto;
     }
 }
@@ -620,18 +647,73 @@ footer#footer p, footer#footer a{
     }
     .span12.article-container .thumb-wrapper{
         height:225px;
-    }
-    body{
-        background:url(images/sweb-background-480-zoom-v1.jpg) no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;  
-    }
+    }    
     .float-item-content{
         width:100%;
     }
     #intro{
         padding-top:40px;
     }
+    /*html, body{
+        background-image:url(images/sweb-background-v2-3x5.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        height:100%;
+    }*/
+    .size-full,.size-3x4,.size-2x3{
+        display:none;
+    }
+    
+    .size-3x5{
+        display:block;
+    }
+    .service-item span{
+        font-size:0.7em;
+        line-height:300%;
+    }
+}
+@media screen and (max-width: 320px){
+   /* html, body{
+        background-image:url(images/sweb-background-v2-2x3.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    */
+   .size-full,.size-3x4,.size-3x5x3{
+        display:none;
+    }
+    
+    .size-2x3{
+        display:block;
+    }
+}
+@media screen and (max-width: 240px){
+    /*html, body{
+        background-image:url(images/sweb-background-v2-3x4.jpg);
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }*/
+    .size-full,.size-3x5,.size-2x3{
+        display:none;
+    }
+    
+    .size-2x3{
+        display:block;
+    }
+    
 }
